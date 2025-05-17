@@ -1,7 +1,23 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "baseUrl": ".",                  // ✅ required for alias
+    "paths": {
+      "@/*": ["src/*"]               // ✅ matches vite.config.ts
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
 }
