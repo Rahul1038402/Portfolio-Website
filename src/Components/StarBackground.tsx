@@ -97,7 +97,7 @@ export const StarBackground = () => {
           className="meteor animate-meteor"
           style={{
             width: `${meteor.size * 50}px`,
-            height: `${meteor.size * 2}px`,
+            height: `${meteor.size * 1}px`,
             top: `${meteor.y}vh`,
             left: `${meteor.x}vw`,
             animationDuration: `${meteor.animationDuration}s`,
