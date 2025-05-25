@@ -1,21 +1,44 @@
+import { ArrowBigRight, ExternalLink, Github } from "lucide-react"
 
 const projects = [
     {
         id: 1,
-        title: "1 Calc",
-        description: "One Stop Destination For Various kinds of Calculators",
-        image: "/projects/1calc_ss.png",
-        tags: ["HTML", "Tailwind", "JavaScript"],
-        githuburl: "https://github.com/Rahul1038402/_1-Calc",
-    },
-
-    {
-        id: 2,
         title: "Mealify",
         description: "Simple UI Design for Food Ordering",
         image: "/projects/mealify_ss.png",
         tags: ["HTML", "Tailwind", "JavaScript"],
+        demourl: "#",
         githuburl: "https://github.com/Rahul1038402/Mealify",
+    },
+
+    {
+        id: 2,
+        title: "1 Calc",
+        description: "One Stop Destination For Various kinds of Calculators",
+        image: "/projects/1calc_ss.png",
+        tags: ["HTML", "Tailwind", "JavaScript"],
+        demourl: "#",
+        githuburl: "https://github.com/Rahul1038402/_1-Calc",
+    },
+
+    {
+        id: 3,
+        title: "Resume AI",
+        description: "AI Powered Resume Skills Analyzer",
+        image: "/projects/resume_ai.png",
+        tags: ["HTML", "Tailwind", "ShadCN", "React", "Typescript", "Python", "Flask"],
+        demourl: "#",
+        githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
+    },
+
+    {
+        id: 4,
+        title: "Resume AI",
+        description: "AI Powered Resume Skills Analyzer",
+        image: "/projects/resume_ai.png",
+        tags: ["HTML", "Tailwind", "ShadCN", "React", "Typescript", "Python", "Flask"],
+        demourl: "#",
+        githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
     },
 
 ]
@@ -56,9 +79,32 @@ export const Projects = () => {
                                     ))}
                                 </div>
                             </div>
+
+                            <div className="flex justify-center items-center pb-6">
+                                <div className="flex space-x-3">
+                                    <a href={project.demourl}
+                                        target="_blank"
+                                        className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                        <ExternalLink size={20}></ExternalLink>
+                                    </a>
+                                    <a href={project.githuburl}
+                                        target="_blank"
+                                        className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                        <Github size={20}></Github>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
+                                    <div className="text-center mt-12">
+                        <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
+                            target="_blank"
+                            href="https://github.com/Rahul1038402">
+                            <p>My Github Profile</p>
+                            <ArrowBigRight size={16} />
+                        </a>
+                    </div>
             </div>
         </section>
     )
