@@ -26,7 +26,7 @@ export const Home = () => {
           <ContactSection/>
         </main>
 
-        <Footer title="Rahul's Portfolio"/>
+        <Footer/>
     </div>
   )
 }
