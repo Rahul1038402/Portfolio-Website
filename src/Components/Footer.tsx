@@ -2,7 +2,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4 py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center bg-gray-900">
+    <footer className="w-full px-4 py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
       {/* Left Section */}
       <div className="flex flex-col items-center md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-2">
                 <a className="text-xl text-primary flex items-centre">
@@ -10,7 +10,7 @@ export default function Footer() {
                         <span className="text-glow text-foreground"> Rahul's </span> Portfolio
                     </span>
                 </a>
-        <p className="text-lg text-gray-200">| 2025 Copyright</p>
+        <p className="text-lg text-[hsl(var(--foreground))]">| 2025 Copyright</p>
       </div>
 
       {/* Social Icons Section */}
