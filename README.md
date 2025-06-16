@@ -40,7 +40,7 @@ Built to showcase my projects, skills, and experiences in software development a
 
 ```bash
 # Clone the repo
-git clone https://github.com/rahul1038402/portfolio.git
+git clone https://github.com/Rahul1038402/Portfolio-Website.git
 cd portfolio
 
 # Install dependencies
