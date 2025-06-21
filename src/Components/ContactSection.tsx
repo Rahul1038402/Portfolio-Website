@@ -19,7 +19,7 @@ export const ContactSection = () => {
       setSubmitting(false);
     }, 1500);
 
-    
+
   }
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -42,7 +42,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-center justify-center text-center">
                   <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:rahul1038402@gmail.com"
@@ -54,7 +54,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-center justify-center text-center">
                   <h4 className="font-medium">Phone</h4>
                   <a
                     href="tel:+91 7052566746"
@@ -66,7 +66,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-center justify-center text-center">
                   <h4 className="font-medium">Location</h4>
                   <a
                     className="text-muted-foreground hover:text-primary transition-colors">Noida, UttarPradesh, India</a>

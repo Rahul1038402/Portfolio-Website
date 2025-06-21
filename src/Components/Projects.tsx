@@ -27,17 +27,7 @@ const projects = [
         description: "AI Powered Resume Skills Analyzer",
         image: "/projects/resume_ai.png",
         tags: ["HTML", "Tailwind", "ShadCN", "React", "Typescript", "Python", "Flask"],
-        demourl: "#",
-        githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
-    },
-
-    {
-        id: 4,
-        title: "Resume AI",
-        description: "AI Powered Resume Skills Analyzer",
-        image: "/projects/resume_ai.png",
-        tags: ["HTML", "Tailwind", "ShadCN", "React", "Typescript", "Python", "Flask"],
-        demourl: "#",
+        demourl: "https://resume-ai0-2.vercel.app/",
         githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
     },
 
