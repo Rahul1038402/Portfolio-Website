@@ -31,6 +31,17 @@ const projects = [
         githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
     },
 
+    {
+        id: 4,
+        title: "Posture AI",
+        description: "Rule-Based Bad Posture Detection Web App",
+        image: "/projects/posture_ai.png",
+        tags: ["HTML", "Tailwind", "React", "Typescript", "FastAPI", "OpenCV", "MediaPipe"],
+        demourl: "https://posture-detection-main.vercel.app/",
+        githuburl: "https://github.com/Rahul1038402/Posture-detection-main",
+    }
+
+
 ]
 
 export const Projects = () => {
@@ -87,14 +98,14 @@ export const Projects = () => {
                         </div>
                     ))}
                 </div>
-                                    <div className="text-center mt-12">
-                        <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
-                            target="_blank"
-                            href="https://github.com/Rahul1038402">
-                            <p>My Github Profile</p>
-                            <ArrowBigRight size={16} />
-                        </a>
-                    </div>
+                <div className="text-center mt-12">
+                    <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
+                        target="_blank"
+                        href="https://github.com/Rahul1038402">
+                        <p>My Github Profile</p>
+                        <ArrowBigRight size={16} />
+                    </a>
+                </div>
             </div>
         </section>
     )
