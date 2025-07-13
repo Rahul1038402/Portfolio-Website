@@ -14,8 +14,9 @@ export const HeroSection = () => {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        As a passionate web developer, I specialize in building responsive
-                        and user-friendly websites using modern technologies like React, TypeScript, and Tailwind CSS.
+                        As a passionate fullstack developer, I specialize in building responsive
+                        and user-friendly websites using modern technologies like React, TypeScript, and Tailwind CSS and its backend
+                        logic using Node.js, Flask and FastAPI.
                         I enjoy turning complex problems into clean, efficient solutions with a focus on performance and design.
                         Always eager to learn and grow, I strive to stay up-to-date with the latest trends in web development.
                     </p>

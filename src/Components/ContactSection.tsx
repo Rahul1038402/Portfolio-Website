@@ -34,60 +34,64 @@ export const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">{" "}Contact Information</h3>
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div className="flex flex-col items-center justify-center text-center">
-                  <h4 className="font-medium">Email</h4>
-                  <a
-                    href="mailto:rahul1038402@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors">mailto:rahul1038402@gmail.com</a>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div className="space-y-8">
+  <h3 className="text-2xl font-semibold mb-6 text-center">Contact Information</h3>
+  <div className="space-y-6 flex flex-col items-center">
+    <div className="flex items-center space-x-1 w-full max-w-md">
+      <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
+        <Mail className="h-6 w-6 text-primary" />
+      </div>
+      <div className="flex flex-col items-center justify-center text-center flex-1">
+        <h4 className="font-medium">Email</h4>
+        <a
+          href="mailto:rahul1038402@gmail.com"
+          className="text-muted-foreground hover:text-primary transition-colors">
+          rahul1038402@gmail.com
+        </a>
+      </div>
+    </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div className="flex flex-col items-center justify-center text-center">
-                  <h4 className="font-medium">Phone</h4>
-                  <a
-                    href="tel:+91 7052566746"
-                    className="text-muted-foreground hover:text-primary transition-colors">+91 7052566746</a>
-                </div>
-              </div>
+    <div className="flex items-center space-x-4 w-full max-w-md">
+      <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
+        <Phone className="h-6 w-6 text-primary" />
+      </div>
+      <div className="flex flex-col items-center justify-center text-center flex-1">
+        <h4 className="font-medium">Phone</h4>
+        <a
+          href="tel:+91 7052566746"
+          className="text-muted-foreground hover:text-primary transition-colors">
+          +91 7052566746
+        </a>
+      </div>
+    </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div className="flex flex-col items-center justify-center text-center">
-                  <h4 className="font-medium">Location</h4>
-                  <a
-                    className="text-muted-foreground hover:text-primary transition-colors">Noida, UttarPradesh, India</a>
-                </div>
-              </div>
-            </div>
+    <div className="flex items-center space-x-4 w-full max-w-md">
+      <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
+        <MapPin className="h-6 w-6 text-primary" />
+      </div>
+      <div className="flex flex-col items-center justify-center text-center flex-1">
+        <h4 className="font-medium">Location</h4>
+        <span className="text-muted-foreground">
+          Noida, UttarPradesh, India
+        </span>
+      </div>
+    </div>
+  </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/rahul-malll-85989327b/" target="_blank">
-                  <Linkedin className="hover:text-primary transition-colors" />
-                </a>
+  <div className="pt-8">
+    <h4 className="font-medium mb-4 text-center">Connect With Me</h4>
+    <div className="flex space-x-4 justify-center">
+      <a href="https://www.linkedin.com/in/rahul-malll-85989327b/" target="_blank">
+        <Linkedin className="hover:text-primary transition-colors" />
+      </a>
 
-                <a href="https://www.instagram.com/ig__rahul70/" target="_blank">
-                  <Instagram className="hover:text-primary transition-colors" />
-                </a>
-
-              </div>
-            </div>
-          </div>
+      <a href="https://www.instagram.com/ig__rahul70/" target="_blank">
+        <Instagram className="hover:text-primary transition-colors" />
+      </a>
+    </div>
+  </div>
+</div>
 
           <div
             className="bg-card p-8 rounded-lg shadow-xs">
