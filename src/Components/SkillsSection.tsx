@@ -5,21 +5,23 @@ const skills = [
     //Frontend
     { name: "HTML/CSS", level: 95, category: "frontend" },
     { name: "JavaScript", level: 85, category: "frontend" },
-    { name: "React", level: 90, category: "frontend" },
-    { name: "TypeScript", level: 90, category: "frontend" },
+    { name: "React", level: 85, category: "frontend" },
+    { name: "NextJS", level: 80, category: "frontend" },
+    { name: "TypeScript", level: 85, category: "frontend" },
     { name: "Tailwind CSS", level: 90, category: "frontend" },
 
     //Backend
-    { name: "Node.Js", level: 80, category: "backend" },
-    { name: "Python", level: 45, category: "backend" },
-    { name: "Flask", level: 50, category: "backend" },
+    { name: "Node.Js", level: 75, category: "backend" },
+    { name: "Python", level: 70, category: "backend" },
+    { name: "Flask", level: 60, category: "backend" },
+    { name: "Fast API", level: 55, category: "backend" },
 
     //Tools
     { name: "Git/GitHub", level: 85, category: "tools" },
     { name: "VS Code", level: 85, category: "tools" },
 
     //DSA
-    { name: "DSA", level: 40, category: "dsa" },
+    { name: "DSA", level: 50, category: "dsa" },
 
 ]
 

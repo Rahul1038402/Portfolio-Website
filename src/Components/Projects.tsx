@@ -23,18 +23,18 @@ const projects = [
 
     {
         id: 3,
-        title: "Resume AI",
-        description: "AI Powered Resume Skills Analyzer",
+        title: "Resume AI - Smart Analyzer & Builder",
+        description: "Comprehensive AI-powered platform for resume analysis, ATS optimization, professional resume building, and job application tracking with Google authentication",
         image: "/projects/resume_ai.png",
-        tags: ["HTML", "Tailwind", "ShadCN", "React", "Typescript", "Python", "Flask"],
-        demourl: "https://resume-ai0-2.vercel.app/",
-        githuburl: "https://github.com/Mzuhaibkhan/resume-ai0.2.git",
+        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Flask", "Python", "Cohere AI", "Supabase", "Google OAuth"],
+        demourl: "https://resume-ai-rework.vercel.app/",
+        githuburl: "https://github.com/Rahul1038402/resume-ai-rework.git",
     },
 
     {
         id: 4,
-        title: "Posture AI",
-        description: "Rule-Based Bad Posture Detection Web App",
+        title: "Posture AI - Rule-Based Bad Posture Detector",
+        description: "Full-stack posture detection app leveraging MediaPipe and OpenCV to flag incorrect sitting or exercise posture using rule-based analysis.",
         image: "/projects/posture_ai.png",
         tags: ["HTML", "Tailwind", "React", "Typescript", "FastAPI", "OpenCV", "MediaPipe"],
         demourl: "https://posture-detection-main.vercel.app/",
