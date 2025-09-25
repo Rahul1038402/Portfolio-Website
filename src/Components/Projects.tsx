@@ -1,28 +1,9 @@
 import { ArrowBigRight, ExternalLink, Github } from "lucide-react"
 
+// '#' use karna hai demourl me agar live na ho to
 const projects = [
     {
         id: 1,
-        title: "Mealify",
-        description: "Simple UI Design for Food Ordering",
-        image: "/projects/mealify_ss.png",
-        tags: ["HTML", "Tailwind", "JavaScript"],
-        demourl: "#",
-        githuburl: "https://github.com/Rahul1038402/Mealify",
-    },
-
-    {
-        id: 2,
-        title: "1 Calc",
-        description: "One Stop Destination For Various kinds of Calculators",
-        image: "/projects/1calc_ss.png",
-        tags: ["HTML", "Tailwind", "JavaScript"],
-        demourl: "#",
-        githuburl: "https://github.com/Rahul1038402/_1-Calc",
-    },
-
-    {
-        id: 3,
         title: "Resume AI - Smart Analyzer & Builder",
         description: "Comprehensive AI-powered platform for resume analysis, ATS optimization, professional resume building, and job application tracking with Google authentication",
         image: "/projects/resume_ai.png",
@@ -32,16 +13,33 @@ const projects = [
     },
 
     {
-        id: 4,
+        id: 2,
         title: "Posture AI - Rule-Based Bad Posture Detector",
         description: "Full-stack posture detection app leveraging MediaPipe and OpenCV to flag incorrect sitting or exercise posture using rule-based analysis.",
         image: "/projects/posture_ai.png",
-        tags: ["HTML", "Tailwind", "React", "Typescript", "FastAPI", "OpenCV", "MediaPipe"],
+        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "OpenCV", "MediaPipe"],
         demourl: "https://posture-detection-main.vercel.app/",
         githuburl: "https://github.com/Rahul1038402/Posture-detection-main",
-    }
+    },
+    {
+        id: 3,
+        title: "Mealify",
+        description: "Simple UI Design for Food Ordering",
+        image: "/projects/mealify_ss.png",
+        tags: ["HTML", "Tailwind", "JavaScript"],
+        demourl: "#",
+        githuburl: "https://github.com/Rahul1038402/Mealify",
+    },
 
-
+    {
+        id: 4,
+        title: "1 Calc",
+        description: "One Stop Destination For Various kinds of Calculators",
+        image: "/projects/1calc_ss.png",
+        tags: ["HTML", "Tailwind", "JavaScript"],
+        demourl: "#",
+        githuburl: "https://github.com/Rahul1038402/_1-Calc",
+    },
 ]
 
 export const Projects = () => {
@@ -76,18 +74,28 @@ export const Projects = () => {
                             <div className="py-6">
                                 <div className="flex flex-wrap justify-center gap-2 mb-4">
                                     {project.tags.map((tag) => (
-                                        <span className="bg-primary/10 font-medium text-secondary-foreground px-2 py-1 text-sm border rounded-full">{tag}</span>
+                                        <span
+                                            key={tag}
+                                            className="bg-primary/10 font-medium text-secondary-foreground px-2 py-1 text-sm border rounded-full"
+                                        >
+                                            {tag}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="flex justify-center items-center pb-6">
                                 <div className="flex space-x-3">
-                                    <a href={project.demourl}
-                                        target="_blank"
-                                        className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                        <ExternalLink size={20}></ExternalLink>
-                                    </a>
+                                    {project.demourl !== "#" && (
+                                        <a
+                                            href={project.demourl}
+                                            target="_blank"
+                                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                        >
+                                            <ExternalLink size={20} />
+                                        </a>
+                                    )}
+
                                     <a href={project.githuburl}
                                         target="_blank"
                                         className="text-foreground/80 hover:text-primary transition-colors duration-300">
@@ -99,12 +107,14 @@ export const Projects = () => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
-                        target="_blank"
-                        href="https://github.com/Rahul1038402">
-                        <p>My Github Profile</p>
-                        <ArrowBigRight size={16} />
-                    </a>
+                    <button>
+                        <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
+                            target="_blank"
+                            href="https://github.com/Rahul1038402">
+                            <p>My Github Profile</p>
+                            <ArrowBigRight size={16} />
+                        </a>
+                    </button>
                 </div>
             </div>
         </section>
