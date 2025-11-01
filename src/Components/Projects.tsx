@@ -137,7 +137,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                 {/* Modal Content */}
                 <div className="p-8">
                     {/* Header */}
-                    <h2 className="text-3xl font-bold mb-4 text-primary">{project.title}</h2>
+                    <h2 className="text-3xl mb-4 text-primary">{project.title}</h2>
 
                     {/* Links */}
                     <div className="flex justify-center items-center gap-4 pt-4">
