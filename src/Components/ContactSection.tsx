@@ -82,7 +82,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-5xl mb-4 text-center">
           Get In <span className="text-primary">Touch</span>
         </h2>
 
@@ -94,7 +94,7 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-8 pt-8">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Contact Information</h3>
+            <h3 className="text-3xl mb-6 text-center text-primary">Contact Information</h3>
             <div className="space-y-6 flex flex-col items-center">
               <div className="flex items-center space-x-1 w-full max-w-md">
                 <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
@@ -103,7 +103,9 @@ export const ContactSection = () => {
                 <div className="flex flex-col items-center justify-center text-center flex-1">
                   <h4 className="font-medium">Email</h4>
                   <div className="flex items-center gap-2">
-                    <a href="mailto:rahul1038402@gmail.com">
+                    <a
+                      href="mailto:rahul1038402@gmail.com"
+                      className="text-muted-foreground hover:text-primary transition-colors">
                       rahul1038402@gmail.com
                     </a>
                     <button onClick={copyEmail} className="text-xs">
@@ -146,7 +148,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4 text-center">Connect With Me</h4>
+              <h4 className="text-2xl text-primary mb-4 text-center">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a href="https://www.linkedin.com/in/rahul-malll-85989327b/" target="_blank">
                   <Linkedin className="hover:text-primary transition-colors" />
@@ -160,7 +162,7 @@ export const ContactSection = () => {
           </div>
 
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-2">Send a Message</h3>
+            <h3 className="text-3xl mb-6 text-center text-primary">Send a Message</h3>
             <h6 className="text-sm text-gray-500 mb-6">Note: I would receive your message as a mail and will be responding as soon as possible.</h6>
 
             <form

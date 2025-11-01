@@ -1,35 +1,69 @@
 import { useState } from "react"
+import { Star } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const skills = [
     //Frontend
-    { name: "HTML/CSS", level: 95, category: "frontend" },
-    { name: "JavaScript", level: 85, category: "frontend" },
-    { name: "React", level: 85, category: "frontend" },
-    { name: "NextJS", level: 80, category: "frontend" },
-    { name: "TypeScript", level: 85, category: "frontend" },
-    { name: "Tailwind CSS", level: 90, category: "frontend" },
+    { name: "HTML/CSS", level: 5, category: "frontend" },
+    { name: "JavaScript", level: 4, category: "frontend" },
+    { name: "React", level: 4, category: "frontend" },
+    { name: "NextJS", level: 4, category: "frontend" },
+    { name: "TypeScript", level: 4.5, category: "frontend" },
+    { name: "Tailwind CSS", level: 5, category: "frontend" },
 
     //Backend
-    { name: "Node.Js", level: 75, category: "backend" },
-    { name: "Python", level: 70, category: "backend" },
-    { name: "Flask", level: 60, category: "backend" },
-    { name: "Fast API", level: 55, category: "backend" },
+    { name: "Node.Js", level: 4, category: "backend" },
+    { name: "Python", level: 3.5, category: "backend" },
+    { name: "Flask", level: 3, category: "backend" },
+    { name: "Fast API", level: 3, category: "backend" },
+
+    //Deployment
+    { name: "AWS", level: 3, category: "deployment" },
+    { name: "Docker", level: 3, category: "deployment" },
 
     //Tools
-    { name: "Git/GitHub", level: 85, category: "tools" },
-    { name: "VS Code", level: 85, category: "tools" },
+    { name: "Git/GitHub", level: 4.5, category: "tools" },
+    { name: "VS Code", level: 4.5, category: "tools" },
 
     //DSA
-    { name: "DSA", level: 50, category: "dsa" },
-
+    { name: "DSA", level: 2.5, category: "dsa" },
 ]
 
+const categories = ["all", "frontend", "backend", "deployment", "tools", "dsa"]
 
-const categories = ["all", "frontend", "backend", "tools", "dsa"]
+const StarRating = ({ rating }: { rating: number }) => {
+    return (
+        <div className="flex gap-1">
+            {[1, 2, 3, 4, 5].map((star) => {
+                const filled = rating >= star
+                const halfFilled = rating >= star - 0.5 && rating < star
+                
+                return (
+                    <div key={star} className="relative">
+                        {halfFilled ? (
+                            <>
+                                <Star className="w-5 h-5 text-muted-foreground/30" fill="currentColor" />
+                                <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+                                    <Star className="w-5 h-5 text-primary" fill="currentColor" />
+                                </div>
+                            </>
+                        ) : (
+                            <Star 
+                                className={cn(
+                                    "w-5 h-5",
+                                    filled ? "text-primary" : "text-muted-foreground/30"
+                                )} 
+                                fill="currentColor" 
+                            />
+                        )}
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
 
 export const SkillsSection = () => {
-
     const [activeCategory, setActiveCategory] = useState<string>("all")
 
     const filteredSkills = skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory)
@@ -39,7 +73,7 @@ export const SkillsSection = () => {
             id="skills"
             className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <h2 className="text-5xl mb-12 text-center">
                     My <span className="text-primary">Skills</span>
                 </h2>
 
@@ -62,24 +96,15 @@ export const SkillsSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                            <div className="text-left mb-4">
-                                <h3 className="font-semibold text-lg"> {skill.name} </h3>
+                            <div className="flex items-center justify-between mb-3">
+                                <h3 className="font-semibold text-lg">{skill.name}</h3>
+                                <span className="text-sm text-muted-foreground">{skill.level}/5</span>
                             </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                                <div
-                                    className="bg-primary h-2 rounded-full origin-left animate-grow_1.5s_ease-out"
-                                    style={{ width: skill.level + "%" }}
-                                />
-                            </div>
-
-                            <div className="text-right mt-1">
-                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                            </div>
+                            <StarRating rating={skill.level} />
                         </div>
                     ))}
                 </div>
             </div>
-
         </section>
     )
 }
