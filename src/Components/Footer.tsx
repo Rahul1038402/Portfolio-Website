@@ -2,11 +2,11 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4 py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+    <footer className="relative z-10 bg-transparent w-full px-4 py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center text-[hsl(var(--foreground))]">
       {/* Left Section */}
       <div className="flex flex-col items-center md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-2">
                 <a className="text-xl text-primary flex items-centre">
-                    <span className="relative z-10">
+                    <span className="">
                         <span className="text-glow text-foreground"> Rahul's </span> Portfolio
                     </span>
                 </a>

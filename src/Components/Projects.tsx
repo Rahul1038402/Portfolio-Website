@@ -10,12 +10,12 @@ type WorkflowImage = {
 type Project = {
     id: number;
     title: string;
-    description: string;
+    description?: string | any;
     image: string;
     tags: string[];
     demourl: string;
     githuburl: string;
-    detailedDescription?: string;
+    detailedDescription?: string | any;
     features?: string[];
     workflowImages?: WorkflowImage[];
 };
@@ -23,13 +23,36 @@ type Project = {
 const projects: Project[] = [
     {
         id: 1,
-        title: "Resume AI - Smart Resume Analyzer & Builder (Saas)",
-        description: "Comprehensive AI-powered platform for resume analysis, ATS optimization, professional resume building, and job application tracking with Google authentication",
+        title: "Resume AI - Smart Resume Analyzer & Builder",
+        description: (
+            <>
+                AI-powered platform for resume analysis, ATS optimized resume building, and job application tracking.
+                <br />
+                <br />
+                <strong>Currently in development with plans to launch as a SaaS product</strong>
+            </>
+        ),
         image: "/projects/resume_ai/img1.png",
-        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Flask", "Cohere AI", "Supabase", "Google OAuth"],
+        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Flask", "Supabase", "Google OAuth"],
         demourl: "https://resume-ai-rework.vercel.app/",
-        githuburl: "https://github.com/Rahul1038402/resume-ai-rework.git",
-        detailedDescription: "A comprehensive platform that leverages AI to help job seekers optimize their resumes. Features include intelligent resume analysis, ATS score calculation, professional resume building with templates, and a complete job application tracking system. Built with modern tech stack ensuring scalability and performance.",
+        githuburl: "#",
+        detailedDescription: (
+            <div className="text-left">
+                A comprehensive AI-powered career platform designed to streamline the entire job application process:
+                <br /><br />
+                • <strong className="text-primary">Intelligent Resume Analyzer:</strong> Provides detailed feedback on content quality, formatting, keyword optimization, and overall resume effectiveness with AI-powered insights
+                <br /><br />
+                • <strong className="text-primary">ATS Scoring System:</strong> Evaluates resumes against industry standards and Applicant Tracking Systems, delivering actionable recommendations to improve compatibility and pass rate
+                <br /><br />
+                • <strong className="text-primary">Professional Resume Builder:</strong> Multiple ATS-friendly templates with real-time preview, drag-and-drop customization, and export options in various formats while maintaining optimal formatting
+                <br /><br />
+                • <strong className="text-primary">Job Application Tracker:</strong> Comprehensive dashboard to manage the entire job search journey - track applications, deadlines, interview schedules, company contacts, and follow-ups in one centralized location
+                <br /><br />
+                • <strong className="text-primary">Secure Authentication:</strong> Google OAuth integration ensures secure access with seamless user experience and data protection
+                <br /><br />
+                Built with a modern tech stack including React, TypeScript, Node.js, and MongoDB, engineered for scalability and high performance. Currently in active development with plans to launch as a SaaS product, offering tiered subscription plans for individual job seekers and enterprise solutions for career services.
+            </div>
+        ),
         features: [
             "AI-powered resume analysis with detailed insights",
             "ATS score calculation and optimization suggestions",
@@ -53,7 +76,23 @@ const projects: Project[] = [
         tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "OpenCV", "MediaPipe"],
         demourl: "https://posture-detection-main.vercel.app/",
         githuburl: "https://github.com/Rahul1038402/Posture-detection-main",
-        detailedDescription: "Real-time posture detection system using computer vision and machine learning. The application uses MediaPipe for pose estimation and applies rule-based logic to detect poor posture during work or exercise. Provides instant feedback to help users maintain proper posture and prevent health issues.",
+        detailedDescription: (
+            <div className="text-left">
+                A real-time posture detection system leveraging computer vision and machine learning to promote healthier work and exercise habits:
+                <br /><br />
+                • <strong className="text-primary">MediaPipe Pose Estimation:</strong> Utilizes Google's MediaPipe framework for accurate real-time detection of body landmarks and joint positions through webcam input
+                <br /><br />
+                • <strong className="text-primary">Intelligent Posture Analysis:</strong> Rule-based algorithms analyze body alignment, shoulder position, neck angle, and spine curvature to identify poor posture patterns
+                <br /><br />
+                • <strong className="text-primary">Instant Feedback System:</strong> Provides real-time visual and audio alerts when poor posture is detected, helping users correct their position immediately
+                <br /><br />
+                • <strong className="text-primary">Session Tracking:</strong> Monitors posture quality over time with detailed statistics and insights to track improvement and identify problem areas
+                <br /><br />
+                • <strong className="text-primary">Customizable Sensitivity:</strong> Adjustable detection parameters to accommodate different body types, work setups, and personal preferences
+                <br /><br />
+                Built with Python, OpenCV, and MediaPipe for robust performance and accuracy. Designed to prevent common health issues like neck pain, back pain, and repetitive strain injuries caused by prolonged poor posture during desk work or exercise.
+            </div>
+        ),
         features: [
             "Real-time pose estimation using MediaPipe",
             "Rule-based posture analysis algorithm",
@@ -75,7 +114,23 @@ const projects: Project[] = [
         tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "Google OAuth"],
         demourl: "#",
         githuburl: "https://github.com/Rahul1038402/TeamCamp-Lite",
-        detailedDescription: "A clean and intuitive project management platform designed for small to medium-sized teams. Features comprehensive project tracking, team collaboration tools, and detailed analytics to keep everyone aligned and productive.",
+        detailedDescription: (
+            <div className="text-left">
+                A clean and intuitive project management platform designed to keep small to medium-sized teams aligned and productive:
+                <br /><br />
+                • <strong className="text-primary">Comprehensive Project Tracking:</strong> Create, organize, and monitor projects with customizable workflows, task lists, milestones, and deadline management
+                <br /><br />
+                • <strong className="text-primary">Team Collaboration Tools:</strong> Built-in features for team communication, file sharing, comments, and @mentions to keep everyone on the same page
+                <br /><br />
+                • <strong className="text-primary">Task Management:</strong> Assign tasks, set priorities, track progress with status updates, and manage dependencies between related tasks
+                <br /><br />
+                • <strong className="text-primary">Detailed Analytics Dashboard:</strong> Visual insights into project progress, team productivity, task completion rates, and resource allocation with exportable reports
+                <br /><br />
+                • <strong className="text-primary">Role-Based Access:</strong> Customizable permissions for team members, managers, and stakeholders ensuring appropriate access levels
+                <br /><br />
+                Built with a focus on user experience and simplicity, eliminating the complexity often found in enterprise project management tools. Perfect for startups, creative agencies, and growing teams that need powerful features without the learning curve.
+            </div>
+        ),
         features: [
             "Centralized project dashboard with overview",
             "Team member management and role assignment",
@@ -98,7 +153,19 @@ const projects: Project[] = [
         tags: ["HTML", "Tailwind", "JavaScript"],
         demourl: "#",
         githuburl: "https://github.com/Rahul1038402/_1-Calc",
-        detailedDescription: "A comprehensive calculator application featuring multiple calculator types in one place. Includes scientific calculator, unit converter, BMI calculator, and more. Built with vanilla JavaScript for optimal performance.",
+        detailedDescription: (
+            <div className="text-left">
+                A comprehensive calculator application combining multiple calculation tools in one unified, user-friendly interface:
+                <br /><br />
+                • <strong className="text-primary">Scientific Calculator:</strong> Advanced mathematical functions including trigonometry, logarithms, exponentials, factorials, and complex number operations
+                <br /><br />
+                • <strong className="text-primary">Unit Converter:</strong> Supports conversion between various units across multiple categories - length, weight, temperature, volume, speed, time, and digital storage
+                <br /><br />
+                • <strong className="text-primary">BMI Calculator:</strong> Health-focused tool to calculate Body Mass Index with interpretations and healthy range indicators based on height and weight inputs
+                <br /><br />
+                Built with vanilla JavaScript, HTML5, and CSS3 for optimal performance without framework overhead. Features clean, responsive design that works seamlessly across desktop and mobile devices with instant calculations and no backend dependencies.
+            </div>
+        ),
         features: [
             "Multiple calculator types in one platform",
             "Scientific calculator with advanced functions",
@@ -152,6 +219,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                                 <span>Live Demo</span>
                             </a>
                         )}
+                        {project.githuburl !== "#" && (
                         <a
                             href={project.githuburl}
                             target="_blank"
@@ -161,6 +229,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                             <Github size={18} />
                             <span>View Code</span>
                         </a>
+                        )}
                     </div>
 
                     {/* Tech Stack */}
@@ -299,7 +368,7 @@ export const Projects = () => {
 
                                 <div className="p-6">
                                     <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
-                                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                                    <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
 
                                     <div className="flex flex-wrap justify-center gap-2 mb-4">
                                         {project.tags.slice(0, 3).map((tag) => (
