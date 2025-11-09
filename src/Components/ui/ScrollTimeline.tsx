@@ -213,6 +213,7 @@ export const ScrollTimeline = ({
     return (
         <div
             ref={scrollRef}
+            id='journey'
             className={cn(
                 "relative min-h-screen w-full overflow-hidden",
                 darkMode ? "bg-background text-foreground" : "",
@@ -221,7 +222,7 @@ export const ScrollTimeline = ({
         >
             <div className="text-center py-16 px-4">
                 <h2 className="text-5xl mb-12 text-center">
-                    My<span className="text-primary"> Joruney</span>
+                    My<span className="text-primary"> Journey</span>
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                     {subtitle}
