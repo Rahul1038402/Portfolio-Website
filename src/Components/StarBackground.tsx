@@ -123,7 +123,6 @@ export const StarBackground = () => {
       <style>{`
         @keyframes glow {
           0% { 
-            opacity: 0;
             box-shadow: none;
           }
           25% {
