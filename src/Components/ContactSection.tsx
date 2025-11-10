@@ -161,7 +161,7 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card p-8 rounded-lg shadow-xs border-[1px] border-primary/40">
             <h3 className="text-3xl mb-6 text-center text-primary">Send a Message</h3>
             <h6 className="text-sm text-gray-500 mb-6">Note: I would receive your message as a mail and will be responding as soon as possible.</h6>
 
