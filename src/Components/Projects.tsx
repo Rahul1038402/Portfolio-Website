@@ -29,13 +29,15 @@ const projects: Project[] = [
                 AI-powered platform for resume analysis, ATS optimized resume building, and job application tracking.
                 <br />
                 <br />
-                <strong>Currently in development with plans to launch as a SaaS product</strong>
+                <strong className="text-primary">500+ Github clones in a month</strong>
+                <br />
+                <strong className="text-primary">600+ Peak Active Users in a month</strong>
             </>
         ),
         image: "/projects/resume_ai/img1.png",
         tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Flask", "Supabase", "Google OAuth"],
         demourl: "https://resume-ai-rework.vercel.app/",
-        githuburl: "#",
+        githuburl: "https://github.com/Rahul1038402/Resume-AI-Rework",
         detailedDescription: (
             <div className="text-left">
                 A comprehensive AI-powered career platform designed to streamline the entire job application process:
@@ -70,6 +72,45 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: "TeamCamp Lite",
+        description: "A Simplified Project Management Tool for startups, creative agencies, and growing teams that need powerful features without the learning curve.",
+        image: "/projects/teamcamp_lite/img1.png",
+        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "Google OAuth"],
+        demourl: "#",
+        githuburl: "https://github.com/Rahul1038402/TeamCamp-Lite",
+        detailedDescription: (
+            <div className="text-left">
+                A clean and intuitive project management platform designed to keep small to medium-sized teams aligned and productive:
+                <br /><br />
+                • <strong className="text-primary">Comprehensive Project Tracking:</strong> Create, organize, and monitor projects with customizable workflows, task lists, milestones, and deadline management
+                <br /><br />
+                • <strong className="text-primary">Team Collaboration Tools:</strong> Built-in features for team communication, file sharing, comments, and @mentions to keep everyone on the same page
+                <br /><br />
+                • <strong className="text-primary">Task Management:</strong> Assign tasks, set priorities, track progress with status updates, and manage dependencies between related tasks
+                <br /><br />
+                • <strong className="text-primary">Detailed Analytics Dashboard:</strong> Visual insights into project progress, team productivity, task completion rates, and resource allocation with exportable reports
+                <br /><br />
+                • <strong className="text-primary">Role-Based Access:</strong> Customizable permissions for team members, managers, and stakeholders ensuring appropriate access levels
+                <br /><br />
+                Built with a focus on user experience and simplicity, eliminating the complexity often found in enterprise project management tools. Perfect for startups, creative agencies, and growing teams that need powerful features without the learning curve.
+            </div>
+        ),
+        features: [
+            "Centralized project dashboard with overview",
+            "Team member management and role assignment",
+            "Task creation, assignment, and tracking",
+            "File sharing and document management",
+            "Detailed project statistics and analytics",
+            "Google OAuth for seamless authentication"
+        ],
+        workflowImages: [
+            { id: 1, src: "/projects/teamcamp_lite/img2.png", description: "Login Using your Gmail" },
+            { id: 2, src: "/projects/teamcamp_lite/img3.png", description: "All Projects Dashboard (Create new or Access previous ones)" },
+            { id: 3, src: "/projects/teamcamp_lite/img4.png", description: "Individual Project Management (Overview, Team Members, Tasks, Files) with Deatiled Stats" },
+        ]
+    },
+    {
+        id: 3,
         title: "Posture AI - Rule-Based Bad Posture Detector",
         description: "Full-stack posture detection app leveraging MediaPipe and OpenCV to flag incorrect sitting or exercise posture using rule-based analysis.",
         image: "/projects/posture_ai/img1.png",
@@ -104,45 +145,6 @@ const projects: Project[] = [
         workflowImages: [
             { id: 1, src: "/projects/posture_ai/img2.png", description: "Choose between Video/Webcam Analysis" },
             { id: 2, src: "/projects/posture_ai/img3.png", description: "Get the frame by frame analysis report with fix recommendations" },
-        ]
-    },
-    {
-        id: 3,
-        title: "TeamCamp Lite",
-        description: "A Simplified Project Management Tool for Teams",
-        image: "/projects/teamcamp_lite/img1.png",
-        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "Google OAuth"],
-        demourl: "#",
-        githuburl: "https://github.com/Rahul1038402/TeamCamp-Lite",
-        detailedDescription: (
-            <div className="text-left">
-                A clean and intuitive project management platform designed to keep small to medium-sized teams aligned and productive:
-                <br /><br />
-                • <strong className="text-primary">Comprehensive Project Tracking:</strong> Create, organize, and monitor projects with customizable workflows, task lists, milestones, and deadline management
-                <br /><br />
-                • <strong className="text-primary">Team Collaboration Tools:</strong> Built-in features for team communication, file sharing, comments, and @mentions to keep everyone on the same page
-                <br /><br />
-                • <strong className="text-primary">Task Management:</strong> Assign tasks, set priorities, track progress with status updates, and manage dependencies between related tasks
-                <br /><br />
-                • <strong className="text-primary">Detailed Analytics Dashboard:</strong> Visual insights into project progress, team productivity, task completion rates, and resource allocation with exportable reports
-                <br /><br />
-                • <strong className="text-primary">Role-Based Access:</strong> Customizable permissions for team members, managers, and stakeholders ensuring appropriate access levels
-                <br /><br />
-                Built with a focus on user experience and simplicity, eliminating the complexity often found in enterprise project management tools. Perfect for startups, creative agencies, and growing teams that need powerful features without the learning curve.
-            </div>
-        ),
-        features: [
-            "Centralized project dashboard with overview",
-            "Team member management and role assignment",
-            "Task creation, assignment, and tracking",
-            "File sharing and document management",
-            "Detailed project statistics and analytics",
-            "Google OAuth for seamless authentication"
-        ],
-        workflowImages: [
-            { id: 1, src: "/projects/teamcamp_lite/img2.png", description: "Login Using your Gmail" },
-            { id: 2, src: "/projects/teamcamp_lite/img3.png", description: "All Projects Dashboard (Create new or Access previous ones)" },
-            { id: 3, src: "/projects/teamcamp_lite/img4.png", description: "Individual Project Management (Overview, Team Members, Tasks, Files) with Deatiled Stats" },
         ]
     },
     {
@@ -220,15 +222,15 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                             </a>
                         )}
                         {project.githuburl !== "#" && (
-                        <a
-                            href={project.githuburl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-foreground/5 transition-colors"
-                        >
-                            <Github size={18} />
-                            <span>View Code</span>
-                        </a>
+                            <a
+                                href={project.githuburl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-foreground/5 transition-colors"
+                            >
+                                <Github size={18} />
+                                <span>View Code</span>
+                            </a>
                         )}
                     </div>
 
@@ -339,7 +341,7 @@ export const Projects = () => {
     return (
         <>
             <section id="projects" className="py-24 px-4 relative">
-                <div className="container mx-auto max-w-5xl">
+                <div className="container mx-auto">
                     <h2 className="text-5xl mb-12 text-center">
                         Featured<span className="text-primary"> Projects</span>
                     </h2>
@@ -355,7 +357,7 @@ export const Projects = () => {
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="group bg-card border-[1px] border-primary/40 rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer transition-colors duration-200"
+                                className="group bg-card border-[1px] border-primary/40 rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer transition-colors duration-200 flex flex-col"
                                 onClick={() => setSelectedProject(project)}
                             >
                                 <div className="w-full aspect-[478/228] overflow-hidden rounded mb-3">
@@ -366,9 +368,14 @@ export const Projects = () => {
                                     />
                                 </div>
 
-                                <div className="p-6">
-                                    <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
-                                    <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                                <div className="p-6 flex flex-col flex-grow">
+                                    <h3 className="text-xl font-semibold mb-2 text-primary">
+                                        {project.title}
+                                    </h3>
+
+                                    <p className="text-muted-foreground mb-4">
+                                        {project.description}
+                                    </p>
 
                                     <div className="flex flex-wrap justify-center gap-2 mb-4">
                                         {project.tags.slice(0, 3).map((tag) => (
@@ -386,13 +393,14 @@ export const Projects = () => {
                                         )}
                                     </div>
 
-                                    <div className="flex justify-center items-center text-primary hover:text-primary/70 transition-colors duration-200 gap-3">
+                                    <div className="mt-auto pb-4 flex justify-center items-center text-primary hover:text-primary/70 transition-colors duration-200 gap-3">
                                         View Details
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
+
 
                     <div className="text-center mt-12">
                         <a
