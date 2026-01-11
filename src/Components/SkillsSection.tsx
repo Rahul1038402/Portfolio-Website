@@ -45,7 +45,7 @@ const SkillCard = ({ name, logoUrl }: SkillCardProps) => {
             {/* Asteroid background with irregular shape */}
             <div
                 className={cn(
-                    "relative p-8 shadow-2xl transition-all duration-300",
+                    "relative p-8 transition-all duration-300",
 
                 )}
             >
@@ -53,7 +53,7 @@ const SkillCard = ({ name, logoUrl }: SkillCardProps) => {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center min-h-[140px]">
                     {/* Tech Logo */}
-                    <div className={cn("mb-3 bg-primary/60 backdrop-blur-sm rounded-xl p-3 shadow-xl border border-purple-500/30", isHovered && "transition-all scale-105 shadow-purple-500/40 duration-200")}>
+                    <div className={cn("mb-3 bg-gray-300 dark:bg-primary/60 backdrop-blur-sm rounded-xl p-3 shadow-xl border border-purple-500/30", isHovered && "transition-all scale-105 shadow-purple-500/40 duration-200")}>
                         <img
                             src={logoUrl}
                             alt={`${name} logo`}
@@ -65,7 +65,7 @@ const SkillCard = ({ name, logoUrl }: SkillCardProps) => {
                     </div>
 
                     {/* Tech Name */}
-                    <h3 className="text-white font-bold text-xl mb-2 text-center drop-shadow-lg">
+                    <h3 className="text-skill-color font-bold text-xl mb-2 text-center drop-shadow-lg">
                         {name}
                     </h3>
 
@@ -100,8 +100,8 @@ export const SkillsSection = () => {
                             className={cn(
                                 "px-6 py-2 rounded-full font-semibold transition-all duration-300 capitalize",
                                 activeCategory === category
-                                    ? "bg-primary text-white shadow-lg shadow-purple-500/50"
-                                    : "text-gray-300 hover:bg-gray-700/70 backdrop-blur-sm border border-primary/70"
+                                    ? "text-white bg-primary shadow-lg shadow-purple-500/50"
+                                    : "text-skill-color hover:bg-gray-700/70 backdrop-blur-sm border border-primary/70"
                             )}
                         >
                             {category}
