@@ -11,11 +11,11 @@ export const HeroSection = () => {
                         <span className="text-primary ml-2 opacity-0 animate-fade-in-delay-2">Mall</span>
                     </h1>
 
-                    <div className="space-y-4 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                            As a passionate fullstack developer, I specialize in building responsive and
+                    <div className="space-y-4 mx-auto opacity-0 animate-fade-in-delay-3">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mx-auto opacity-0 animate-fade-in-delay-3">
+                            As a fullstack developer, I specialize in building responsive and
                             user-friendly websites using <span className="text-primary font-medium">React</span>, <span className="text-primary font-medium">TypeScript</span>, and <span className="text-primary font-medium">Tailwind CSS</span>.
-                            On the backend, I craft robust logic with <span className="text-primary font-medium">Node.js</span>, <span className="text-primary font-medium">Flask</span>, and <span className="text-primary font-medium">FastAPI</span>,
+                            On the backend, I craft robust logic with <span className="text-primary font-medium">Flask</span> and <span className="text-primary font-medium">FastAPI</span>,
                             using <span className="text-primary font-medium">PostgreSQL</span> for database management.
                             I deploy scalable applications with <span className="text-primary font-medium">AWS</span> and <span className="text-primary font-medium">Docker</span>,
                             ensuring reliable and efficient infrastructure.
