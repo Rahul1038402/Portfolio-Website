@@ -1,7 +1,8 @@
 import { useToast } from "@/hooks/use-toast";
-import { Copy, Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Copy, Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
+import { FaXTwitter } from "react-icons/fa6";
 
 export const ContactSection = () => {
 
@@ -14,14 +15,6 @@ export const ContactSection = () => {
     toast({
       title: "Email copied!",
       description: "Email address copied to clipboard"
-    });
-  };
-
-  const copyPhone = () => {
-    navigator.clipboard.writeText('+91 7052566746');
-    toast({
-      title: "Phone number copied!",
-      description: "Phone number copied to clipboard"
     });
   };
 
@@ -117,25 +110,6 @@ export const ContactSection = () => {
 
               <div className="flex items-center space-x-4 w-full max-w-md">
                 <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex flex-col items-center justify-center text-center flex-1">
-                  <h4 className="font-medium">Phone</h4>
-                  <div className="flex items-center gap-2">
-                    <a
-                      href="tel:+91 7052566746"
-                      className="text-muted-foreground hover:text-primary transition-colors">
-                      +91 7052566746
-                    </a>
-                    <button onClick={copyPhone} className="text-xs">
-                      <Copy className="hover:text-primary transition-colors" size={14} />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4 w-full max-w-md">
-                <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex flex-col items-center justify-center text-center flex-1">
@@ -150,12 +124,18 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="text-2xl text-primary mb-4 text-center">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
+                <a
+                  href="https://x.com/Rahul_Kr_Mall"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <FaXTwitter size={24} className="hover:text-blue-400 transition-colors duration-300" />
+                </a>
                 <a href="https://www.linkedin.com/in/rahul-malll-85989327b/" target="_blank">
-                  <Linkedin className="hover:text-primary transition-colors" />
+                  <Linkedin className="hover:text-blue-600 transition-colors" />
                 </a>
 
                 <a href="https://www.instagram.com/ig__rahul70/" target="_blank">
-                  <Instagram className="hover:text-primary transition-colors" />
+                  <Instagram className="hover:text-pink-600 transition-colors" />
                 </a>
               </div>
             </div>
