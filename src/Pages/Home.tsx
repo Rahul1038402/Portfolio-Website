@@ -45,6 +45,7 @@ export const Home = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <Projects />
         <ScrollTimeline
           events={events}
           title="My Journey"
@@ -53,7 +54,6 @@ export const Home = () => {
           revealAnimation="fade"
         />
         <SkillsSection />
-        <Projects />
         <ContactSection />
       </main>
 
