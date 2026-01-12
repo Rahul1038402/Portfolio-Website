@@ -89,11 +89,11 @@ export const ContactSection = () => {
           <div className="space-y-8 pt-8">
             <h3 className="text-3xl mb-6 text-center text-primary">Contact Information</h3>
             <div className="space-y-6 flex flex-col items-center">
-              <div className="flex items-center space-x-1 w-full max-w-md">
+              <div className="flex justify-center items-center space-x-6 w-full max-w-md">
                 <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div className="flex flex-col items-center justify-center text-center flex-1">
+                <div className="flex flex-col items-center justify-center text-center">
                   <h4 className="font-medium">Email</h4>
                   <div className="flex items-center gap-2">
                     <a
@@ -108,11 +108,11 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 w-full max-w-md">
+              <div className="flex justify-center items-center space-x-12 w-full max-w-md">
                 <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div className="flex flex-col items-center justify-center text-center flex-1">
+                <div className="flex flex-col items-center justify-center text-center">
                   <h4 className="font-medium">Location</h4>
                   <span className="text-muted-foreground">
                     Noida, UttarPradesh, India
@@ -121,9 +121,9 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8">
+            <div className="pt-8 md:pb-0 pb-8">
               <h4 className="text-2xl text-primary mb-4 text-center">Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+              <div className="flex space-x-8 justify-center">
                 <a
                   href="https://x.com/Rahul_Kr_Mall"
                   target="_blank"
