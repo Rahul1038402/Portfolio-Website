@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="text-glow text-foreground"> Rahul's </span> Portfolio
           </span>
         </a>
-        <p className="text-lg text-[hsl(var(--foreground))]">| 2026 Copyright</p>
+        <p className="text-lg text-[hsl(var(--foreground))]"><span className="md:visible invisible">|</span> 2026 Copyright</p>
       </div>
 
       {/* Social Icons Section */}
