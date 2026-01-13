@@ -340,20 +340,13 @@ export const Projects = () => {
 
     return (
         <>
-            <section id="projects" className="py-24 px-4 relative">
-                <div className="container mx-auto">
+            <section id="projects" className="py-24 md:px-4 relative">
+                <div className="container mx-0 md:mx-auto max-w-4xl md:max-w-full">
                     <h2 className="text-5xl mb-12 text-center">
                         Featured<span className="text-primary"> Projects</span>
                     </h2>
 
-                    <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                        I'm passionate about creating elegant solutions to complex
-                        problems, and I'm constantly learning new technologies and
-                        techniques to stay updated and ever-evolving in field of
-                        web development.
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:gap-12 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-12 gap-8">
                         {projects.map((project) => (
                             <div
                                 key={project.id}
