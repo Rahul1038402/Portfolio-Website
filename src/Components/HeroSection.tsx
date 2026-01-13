@@ -22,7 +22,7 @@ export const HeroSection = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center pt-12 opacity-0 animate-fade-in-delay-4 text-lg">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center pt-12 opacity-0 animate-fade-in-delay-4 text-lg mx-8 sm:mx-0">
                         <a href="#projects" className="cosmic-button">
                             View My Work
                         </a>

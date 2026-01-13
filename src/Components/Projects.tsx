@@ -346,7 +346,7 @@ export const Projects = () => {
                         Featured<span className="text-primary"> Projects</span>
                     </h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-12 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-12 gap-8 ml-2">
                         {projects.map((project) => (
                             <div
                                 key={project.id}
