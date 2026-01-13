@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -35,14 +35,14 @@ export default function Footer() {
               <Instagram size={30} />
             </a>
 
-            {/* LinkedIn */}
+            {/* Gmail */}
             <a
-              href="https://www.linkedin.com/in/rahul-malll-85989327b/"
+              href="mailto:rahul1038402@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+              className="text-gray-500 hover:text-red-600 transition-colors duration-300"
             >
-              <Linkedin size={30} />
+              <Mail size={30} />
             </a>
 
             {/* GitHub */}

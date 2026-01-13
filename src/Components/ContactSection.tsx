@@ -1,5 +1,5 @@
 import { useToast } from "@/hooks/use-toast";
-import { Copy, Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Copy, Instagram, Mail, MapPin, Send } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { FaXTwitter } from "react-icons/fa6";
@@ -74,7 +74,7 @@ export const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-0 md:mx-auto max-w-4xl md:max-w-full">
         <h2 className="text-5xl mb-4 text-center">
           Get In <span className="text-primary">Touch</span>
         </h2>
@@ -85,7 +85,7 @@ export const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="space-y-8 pt-8">
             <h3 className="text-3xl mb-6 text-center text-primary">Contact Information</h3>
             <div className="space-y-6 flex flex-col items-center">
@@ -121,7 +121,7 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8 md:pb-0 pb-8">
+            <div className="pt-8 lg:pb-0 pb-16">
               <h4 className="text-2xl text-primary mb-4 text-center">Connect With Me</h4>
               <div className="flex space-x-8 justify-center">
                 <a
@@ -130,12 +130,18 @@ export const ContactSection = () => {
                   rel="noopener noreferrer">
                   <FaXTwitter size={24} className="hover:text-blue-400 transition-colors duration-300" />
                 </a>
-                <a href="https://www.linkedin.com/in/rahul-malll-85989327b/" target="_blank">
-                  <Linkedin className="hover:text-blue-600 transition-colors" />
+                {/* Gmail */}
+                <a
+                  href="mailto:rahul1038402@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-red-600 transition-colors duration-300"
+                >
+                  <Mail/>
                 </a>
 
                 <a href="https://www.instagram.com/ig__rahul70/" target="_blank">
-                  <Instagram className="hover:text-pink-600 transition-colors" />
+                  <Instagram className="hover:text-pink-600 transition-colors duration-300" />
                 </a>
               </div>
             </div>
