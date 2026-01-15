@@ -7,9 +7,12 @@ import { Projects } from "@/Components/Projects"
 import { ContactSection } from "@/Components/ContactSection"
 import Footer from "@/Components/Footer"
 import { ScrollTimeline } from "@/Components/ui/ScrollTimeline"
+import { useEffect, useState, useRef } from "react"
+import { SkyBackground } from "@/Components/SkyBackground"
+import { ClockTransition } from "@/Components/ClockTransition"
 
 const events = [
-    {
+  {
     year: "2027",
     title: "End of Bachelor's Degree",
   },
@@ -25,7 +28,7 @@ const events = [
     subtitle: "JSS Academy of Technical Education, Noida, UP, India",
     description: "Pursuing a degree in Computer Science with a focus on software development and web technologies."
   },
-    {
+  {
     year: "2022",
     title: "High School Graduation",
     subtitle: "Little Flower School, Gorakhpur, UP, India",
@@ -34,30 +37,99 @@ const events = [
 ]
 
 export const Home = () => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [pendingTheme, setPendingTheme] = useState<boolean | null>(null);
+  const initialized = useRef(false);
+
+  useEffect(() => {
+    // Only initialize once
+    if (!initialized.current) {
+      const storedTheme = localStorage.getItem("theme");
+      const isDark = !storedTheme || storedTheme === "dark";
+      setIsDarkMode(isDark);
+      initialized.current = true;
+    }
+    
+    const observer = new MutationObserver(() => {
+      const newIsDark = document.documentElement.classList.contains('dark');
+      
+      // Detect theme change
+      if (isDarkMode !== null && newIsDark !== isDarkMode && !isTransitioning) {
+        // Start transition
+        setIsTransitioning(true);
+        setPendingTheme(newIsDark);
+        
+        // Wait 1 second before actually changing the theme
+        setTimeout(() => {
+          setIsDarkMode(newIsDark);
+        }, 1000);
+        
+        // End transition after 2 seconds total
+        setTimeout(() => {
+          setIsTransitioning(false);
+          setPendingTheme(null);
+        }, 2000);
+      }
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+    
+    return () => observer.disconnect();
+  }, [isDarkMode, isTransitioning]);
+
+  // Don't render until we know the theme
+  if (isDarkMode === null) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Background */}
+      {!isTransitioning && (
+        <div 
+          key={isDarkMode ? 'dark-bg' : 'light-bg'}
+          className="animate-in fade-in duration-500"
+        >
+          {isDarkMode ? <StarBackground /> : <SkyBackground />}
+        </div>
+      )}
 
+      {/* Clock Transition Overlay */}
+      <ClockTransition 
+        isTransitioning={isTransitioning} 
+        isDarkMode={pendingTheme !== null ? pendingTheme : isDarkMode}
+      />
 
-      <StarBackground />
+      {/* Main Content */}
+      <div
+        className="relative z-10 transition-opacity duration-500"
+        style={{
+          opacity: isTransitioning ? 0 : 1,
+        }}
+      >
+        <Navbar />
 
-      <Navbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <Projects />
+          <ScrollTimeline
+            events={events}
+            title="My Journey"
+            progressIndicator={true}
+            cardAlignment="alternating"
+            revealAnimation="fade"
+          />
+          <SkillsSection />
+          <ContactSection />
+        </main>
 
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <Projects />
-        <ScrollTimeline
-          events={events}
-          title="My Journey"
-          progressIndicator={true}
-          cardAlignment="alternating"
-          revealAnimation="fade"
-        />
-        <SkillsSection />
-        <ContactSection />
-      </main>
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   )
 }
