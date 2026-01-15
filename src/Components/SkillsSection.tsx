@@ -102,7 +102,7 @@ export const SkillsSection = () => {
                                 "px-6 py-2 rounded-full font-semibold transition-all duration-300 capitalize",
                                 activeCategory === category
                                     ? "text-white bg-primary shadow-lg shadow-purple-500/50"
-                                    : "text-skill-color hover:bg-gray-700/70 backdrop-blur-sm border border-primary/70"
+                                    : "text-skill-color hover:bg-primary/30 backdrop-blur-sm border border-primary/70"
                             )}
                         >
                             {category}
