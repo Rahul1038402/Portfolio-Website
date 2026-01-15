@@ -76,7 +76,7 @@ export const Navbar = () => {
         <>
             <nav
                 className={cn(
-                    "fixed w-full z-40 transition-all duration-300",
+                    "fixed w-full top-0 left-0 z-40 transition-all duration-300",
                     isScrolled ? "py-4 bg-background/80 backdrop-blur-md shadow-sm" : "py-5"
                 )}
             >
@@ -135,18 +135,18 @@ export const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Mobile Menu Overlay - Outside navbar, sibling element */}
+            {/* Mobile Menu Overlay */}
             <div 
                 className={cn(
-                    "fixed inset-0 bg-background/95 backdrop-blur-md z-50 flex flex-col items-center justify-center",
+                    "fixed top-0 left-0 right-0 bottom-0 bg-background/95 backdrop-blur-md z-50 flex flex-col items-center justify-center",
                     "transition-all duration-300 md:hidden",
                     isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 )}
             >
-                {/* Close button inside overlay */}
+                {/* Close button aligned to navbar height */}
                 <button 
                     onClick={() => setIsMenuOpen(false)}
-                    className="absolute top-6 right-6 p-2 text-foreground"
+                    className="absolute top-5 right-6 p-2 text-foreground"
                     aria-label="Close Menu"
                 >
                     <X size={24} />
