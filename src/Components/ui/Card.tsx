@@ -37,7 +37,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          "p-6 rounded-lg border-[1px] border-primary/40 bg-card text-card-foreground shadow-sm",
+          "p-6 rounded-lg border-[1px] border-primary/40 bg-transparent backdrop-blur-xl text-card-foreground shadow-sm",
           className
         )}
         {...props}
@@ -203,7 +203,7 @@ export default function CardDemo() {
           </Card>
 
           {/* Outlined Card */}
-          <Card className="border-2 border-primary/20 bg-card/50 backdrop-blur">
+          <Card className="border-2 border-primary/20 bg-transparent backdrop-blur-xl/50 backdrop-blur">
             <CardHeader>
               <CardTitle>Outlined Card</CardTitle>
               <CardDescription>Emphasized border with transparency</CardDescription>

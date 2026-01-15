@@ -181,9 +181,9 @@ export const ScrollTimeline = ({
     const getCardClasses = (index: number) => {
         const baseClasses = "relative z-30 rounded-lg transition-all duration-300";
         const variantClasses = {
-            default: "bg-card border shadow-sm",
-            elevated: "bg-card border border-border/40 shadow-md",
-            outlined: "bg-card/50 backdrop-blur border-2 border-primary/20",
+            default: "bg-transparent backdrop-blur-xl border shadow-sm",
+            elevated: "bg-transparent backdrop-blur-xl border border-border/40 shadow-md",
+            outlined: "bg-transparent backdrop-blur-xl/50 backdrop-blur border-2 border-primary/20",
             filled: "bg-primary/10 border border-primary/30",
         };
         const effectClasses = {
@@ -329,7 +329,7 @@ export const ScrollTimeline = ({
                                                 "w-6 h-6 rounded-full border-4 bg-background flex items-center justify-center",
                                                 index <= activeIndex
                                                     ? "border-primary"
-                                                    : "border bg-card"
+                                                    : "border bg-transparent backdrop-blur-xl"
                                             )}
                                             animate={
                                                 index <= activeIndex
