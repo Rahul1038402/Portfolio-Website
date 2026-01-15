@@ -46,7 +46,7 @@ export const AboutSection = () => {
             </div>
           </div>
           <div className="grid grid-col-1 gap-6">
-            <div className="bg-card border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
+            <div className="bg-transparent backdrop-blur-xl border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
@@ -60,7 +60,7 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-card border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
+            <div className="bg-transparent backdrop-blur-xl border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
@@ -73,7 +73,7 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-card border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
+            <div className="bg-transparent backdrop-blur-xl border-[1px] border-primary/40 p-6 rounded-[2.5rem]">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />

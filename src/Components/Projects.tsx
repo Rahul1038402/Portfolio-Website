@@ -265,7 +265,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                                 {project.features.map((feature, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-start gap-3 p-3 bg-card border-[1px] border-primary/40 rounded-lg"
+                                        className="flex items-start gap-3 p-3 bg-transparent backdrop-blur-xl border-[1px] border-primary/40 rounded-lg"
                                     >
                                         <div className="mt-0.5 flex-shrink-0">
                                             <Check size={18} className="text-primary" />
@@ -302,7 +302,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                                             )}
 
                                             {/* Content */}
-                                            <div className="bg-card rounded-lg p-4 border-[1px] border-primary/40">
+                                            <div className="bg-transparent backdrop-blur-xl rounded-lg p-4 border-[1px] border-primary/40">
                                                 <div className="w-full aspect-[478/228] overflow-hidden rounded mb-3">
                                                     <img
                                                         src={workflow.src}
@@ -350,7 +350,7 @@ export const Projects = () => {
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="group bg-card border-[1px] border-primary/40 rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer transition-colors duration-200 flex flex-col"
+                                className="group bg-transparent backdrop-blur-xl border-[1px] border-primary/40 rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer transition-colors duration-200 flex flex-col"
                                 onClick={() => setSelectedProject(project)}
                             >
                                 <div className="w-full aspect-[478/228] overflow-hidden rounded mb-3">

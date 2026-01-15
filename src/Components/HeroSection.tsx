@@ -27,7 +27,7 @@ export const HeroSection = () => {
                             View My Work
                         </a>
 
-                        <a href="#contact" className="cosmic-button bg-transparent border border-primary text-primary">
+                        <a href="#contact" className="cosmic-button bg-transparent backdrop-blur-xl border border-primary text-primary">
                             Contact Me
                         </a>
                     </div>
