@@ -14,7 +14,7 @@ export const HeroSection = () => {
                     </h1>
                     <ShinyText text="Fullstack Developer" disabled={false} speed={5} className="text-3xl" />
 
-                    <div className="max-w-4xl space-y-4 mx-auto opacity-0 animate-fade-in-delay-3 pt-8">
+                    <div className="max-w-4xl space-y-4 mx-auto opacity-0 animate-fade-in-delay-3 pt-8 px-2">
                         <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed mx-auto opacity-0 animate-fade-in-delay-3">
                             Building responsive web apps with <span className="text-primary font-medium">React</span>, <span className="text-primary font-medium">TypeScript</span>, and <span className="text-primary font-medium">Tailwind CSS</span>.
                             Backend expertise in <span className="text-primary font-medium">Flask</span>, <span className="text-primary font-medium">FastAPI</span>, and <span className="text-primary font-medium">PostgreSQL</span>.
