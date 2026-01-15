@@ -53,7 +53,7 @@ export const ClockTransition = ({ isTransitioning, isDarkMode }: ClockTransition
         }
       `}</style>
 
-      {/* Semi-transparent overlay - customize colors here */}
+      {/* Semi-transparent overlay */}
       <div 
         className="absolute inset-0 transition-all duration-500"
         style={{
