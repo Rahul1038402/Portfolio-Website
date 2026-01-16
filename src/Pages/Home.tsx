@@ -39,7 +39,7 @@ const events = [
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [pendingTheme, setPendingTheme] = useState<boolean | null>(null);
+  const [transitionFromDark, setTransitionFromDark] = useState(false);
   const initialized = useRef(false);
 
   useEffect(() => {
@@ -56,9 +56,11 @@ export const Home = () => {
       
       // Detect theme change
       if (isDarkMode !== null && newIsDark !== isDarkMode && !isTransitioning) {
+        // Store which theme we're transitioning FROM
+        setTransitionFromDark(isDarkMode);
+        
         // Start transition
         setIsTransitioning(true);
-        setPendingTheme(newIsDark);
         
         // Wait 1 second before actually changing the theme
         setTimeout(() => {
@@ -68,7 +70,6 @@ export const Home = () => {
         // End transition after 2 seconds total
         setTimeout(() => {
           setIsTransitioning(false);
-          setPendingTheme(null);
         }, 2000);
       }
     });
@@ -101,7 +102,7 @@ export const Home = () => {
       {/* Clock Transition Overlay */}
       <ClockTransition 
         isTransitioning={isTransitioning} 
-        isDarkMode={pendingTheme !== null ? pendingTheme : isDarkMode}
+        transitionFromDark={transitionFromDark}
       />
 
       {/* Main Content */}
